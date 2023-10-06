@@ -1,0 +1,139 @@
+/* -Geral------------------------------------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    min-width: 520px;
+}
+
+#logo {
+    height: 80px;
+    border: 1px solid goldenrod;
+    border-radius: 6px;
+    padding-bottom: 2px;
+    background-color: rgb(252, 252, 252);
+}
+
+/* --Header----------------------------------------------------------------------- */
+
+header { 
+    position: relative;
+    top: 0px;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    border-top: 3px solid goldenrod;
+    border-bottom: 3px solid goldenrod; 
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgb(24, 24, 24);
+}
+
+nav a{
+    margin-left: 60px;
+    text-decoration: none;
+    color: goldenrod;
+    font-size: 30px;
+}
+
+nav a:hover{
+    color: white;
+}
+
+/* -----------------Footer-------------------------------------------------------- */
+
+footer {
+    position: relative;
+    bottom: 0px;
+    margin-top: auto;
+    border-top: 3px solid goldenrod; 
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    margin: 0 4px;
+}
+
+ul li img {
+    width: 30px; 
+    height: 30px;
+}
+
+/* ----Pagina Principal----------------------------------------------------------- */
+
+.paginaprincipal {
+    z-index: -1;
+    background-image: url(media/cyber-sec.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+
+.section1{
+    background-color: rgba(3, 3, 3, 0.562);
+    height: 100%;
+    color: white;
+}
+
+/* ------Sobre--------------------------------------------------------------------- */
+
+.sobre {
+    z-index: -1;
+    background-image: url(media/tech-info.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+
+.section2{
+    background-color: rgba(3, 3, 3, 0.712);
+    height: 100%;
+    color: white;
+}
+
+/* ----------Fale conosco------------------------------------------------------------ */
+
+.faleconosco {
+    z-index: -1;
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+
+.section3 {
+    background-color: rgba(3, 3, 3, 0.712);
+    height: 100%;
+    color: white;
+}
