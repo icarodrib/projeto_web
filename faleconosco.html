@@ -26,14 +26,14 @@
                     <br/>
                 </div>
                 <div class="form" action="#">
-                    <form>
+                    <form action="https://formsubmit.co/icarodrib@gmail.com" method="post">
                         <label for="nome">Nome completo: </label><br>
-                        <input type="text" id="nome" name="nome" value=""> <br><br>
+                        <input type="text" id="nome" name="nome" value="" placeholder="Seu nome aqui"> <br><br>
                         <label for="email">E-mail: </label><br>
-                        <input type="text" id="email" name="email" value=""> <br><br>
+                        <input type="text" id="email" name="email" value="" placeholder="nome@email.com"> <br><br>
                         <label for="mensagem"></label>Motivo do contato: <br>
-                        <textarea name="mensagem" id="mensagem" rows="10" cols="30"></textarea> <br><br>
-                        <input type="submit"  onclick="alert('Mensagem enviada com sucesso!')" id="submit" value="Enviar">
+                        <textarea name="mensagem" id="mensagem" rows="10" cols="30" placeholder="Achei seu site muito bonito"></textarea> <br><br>
+                        <input type="submit"  onclick="enviarEmail()" id="submit" value="Enviar">
                     </form>
                 </div>
             </section>
@@ -47,4 +47,27 @@
             </ul>
         </footer>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+
+        function enviarEmail(){
+            (function(){
+                emailjs.init("jok7NYQoVm2BqTf2r");  // Chave Publica da conta
+            })();
+
+            var dados = {
+                nome: document.querySelector("#nome").value,
+                email: document.querySelector("#email").value,
+                mensagem: document.querySelector("mensagem").value,
+            }
+
+            var serviceID = "service_18b9ytp"; // ID do serviço de email
+            var templateID = "template_t3h6gyn" // ID do template de email
+
+            emailjs.send(serviceID, templateID, dados)
+            .then( res => {
+                alert("Email enviado com sucesso!");
+            })
+            .catch();
+        }
+    </script>
 </html>
