@@ -4,13 +4,8 @@
     padding: 0;
 }
 
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
-    min-width: 520px;
+    min-width: 1200px;
 }
 
 #logo {
@@ -34,6 +29,7 @@ header {
 }
 
 nav {
+    z-index: 1;
     position: sticky;
     top: 0;
     border-top: 3px solid goldenrod;
@@ -57,29 +53,30 @@ nav a:hover{
 /* -----------------Footer-------------------------------------------------------- */
 
 footer {
-    position: relative;
+    max-height: 167px;
+    position:relative ;
     bottom: 0px;
     margin-top: auto;
     border-top: 3px solid goldenrod; 
     background-color: rgb(24, 24, 24);
     width: 100%;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 10px;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
 
-ul {
+footer ul {
     list-style-type: none;
 }
 
-ul li {
+footer ul li {
     display: inline;
     margin: 0 4px;
 }
 
-ul li img {
+footer ul li img {
     width: 30px; 
     height: 30px;
 }
@@ -87,7 +84,8 @@ ul li img {
 /* ----Pagina Principal----------------------------------------------------------- */
 
 .paginaprincipal {
-    z-index: -1;
+    min-height: 100%;
+    z-index: 0;
     background-image: url(media/cyber-sec.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -97,16 +95,55 @@ ul li img {
 }
 
 .section1{
-    background-color: rgba(3, 3, 3, 0.562);
+    min-height: 100vh;
+    background-color: rgba(3, 3, 3, 0.774);
     height: 100%;
-    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.texto1 {
+    padding-top: 60px;
+    width: 86%;
+    color: rgb(252, 252, 252);
+    /* border: 1px solid white; */
+}
+
+.texto1 h1{
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 1px 3px 1.5rem rgba(3, 3, 3, 0.562);
+    color: goldenrod;
+}
+
+.texto1 h2{
+    font-size: 40px;
+    text-shadow: 1px 3px 1.5rem rgba(3, 3, 3, 0.562);
+    color: goldenrod;
+}
+
+.texto1 h3{
+    font-size: 32px;
+    text-shadow: 1px 3px 1.5rem rgba(3, 3, 3, 0.562);
+    color: goldenrod;
+}
+
+.texto1 p{
+    font-size: 26px;
+}
+
+.texto1 ul {
+    list-style-type: circle;
+    padding-left: 30px;
+    font-size: 26px;
 }
 
 /* ------Sobre--------------------------------------------------------------------- */
 
 .sobre {
-    z-index: -1;
-    background-image: url(media/tech-info.jpg);
+    min-height: 100%;
+    z-index: 0;
+    background-image: url(../src/media/tech-info.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -115,25 +152,153 @@ ul li img {
 }
 
 .section2{
-    background-color: rgba(3, 3, 3, 0.712);
+    min-height: 100vh;
+    background-color: rgba(3, 3, 3, 0.829);
     height: 100%;
-    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.texto2 {
+    padding-top: 30px;
+    width: 76%;
+    color: rgb(252, 252, 252);
+}
+
+.texto2 h1{
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 1px 3px 1.5rem rgba(3, 3, 3, 0.562);
+    color: goldenrod;
+}
+
+.sobremim {
+    width: calc(100%);
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.sobremim img{
+    height: 200px;
+    width: 200px;
+    border: 3px solid goldenrod;
+    border-radius: 50%;
+    position: relative;
+    right: 15%; 
+}
+
+.sobremim h2{
+    font-size: 100px;
+    color: goldenrod;
+    text-shadow: 1px 3px 1.5rem black;
+}
+
+.sobremim2{
+    text-align: left;
+    font-size: 40px;
+    padding-top: 5%;
+    padding-bottom: 30px;
+}
+
+.sobremim2 ul {
+    list-style-type: circle;
+    padding-left: 30px;
+    font-size: 35px;
 }
 
 /* ----------Fale conosco------------------------------------------------------------ */
 
 .faleconosco {
-    z-index: -1;
+    min-height: 100%;
+    z-index: 0;
     background-color: grey;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     height: 100%;
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 
 .section3 {
-    background-color: rgba(3, 3, 3, 0.712);
-    height: 100%;
-    color: white;
+    min-height: 100vh;
+    width: 60%;
+    border-left: 3px solid goldenrod;
+    border-right: 3px solid goldenrod;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    padding: 15px;
+    position: inherit;
+}
+
+.fconosco{
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 560;
+    color: goldenrod;
+    text-shadow: 1px 2px 0.5rem black;
+    background-color: rgb(24, 24, 24);
+}
+
+.form {
+    justify-content: center;
+    justify-self: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+input[type=text] {
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#mensagem{
+    width: 100%;
+    font-size: 20px;
+    resize: none;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#submit {
+    font-size: 15px;
+    width: 80px;
+    background-color: rgb(24, 24, 24);
+    color: goldenrod;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    left: calc(50% - 40px);
+}
+
+#submit:hover{
+    background-color: rgb(61, 61, 61);
 }
